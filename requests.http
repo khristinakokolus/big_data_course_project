@@ -1,0 +1,44 @@
+###
+POST http://localhost:8080/domains_by_pages
+Content-Type: application/json
+
+{}
+
+
+###
+POST http://localhost:8080/pages_by_user
+Content-Type: application/json
+
+{
+  "user_id": "322046"
+}
+
+
+###
+POST http://localhost:8080/pages_count_by_domain
+Content-Type: application/json
+
+
+{
+  "domain": "commons.wikimedia.org"
+}
+
+
+###
+POST http://localhost:8080/page_by_id
+Content-Type: application/json
+
+{
+  "page_id": "3988983"
+}
+
+
+###
+POST http://localhost:8080/users_data
+Content-Type: application/json
+
+
+{
+  "start_time": "2022-06-10",
+  "end_time": "2022-06-12"
+}

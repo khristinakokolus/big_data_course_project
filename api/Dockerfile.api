@@ -1,0 +1,15 @@
+FROM python:3.9-slim
+
+RUN apt-get update
+
+RUN pip install --upgrade pip
+
+COPY requirements.txt /
+
+RUN pip install -r requirements.txt
+
+WORKDIR /opt/app
+
+COPY ./app.py ./variables.py ./cassandra_client.py .
+
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=8080"]
